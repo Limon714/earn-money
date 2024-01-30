@@ -6,6 +6,13 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+});
+
+require __DIR__.'/auth.php';
 
 Route::get('/home',[HomeController::class,'home'])
 ->middleware('auth')
@@ -15,13 +22,11 @@ Route::get('/home',[HomeController::class,'home'])
 Route::get('/',[HomeController::class,'homepage']);
 Route::get('/postpage',[postpageController::class,'postpage']);
 Route::post('/add_post',[postpageController::class,'add_post']);
+Route::get('/showpost',[postpageController::class,'show_post']);
+Route::get('/delete_post/{id}',[postpageController::class,'delete_post']);
+Route::get('/edit_post/{id}',[postpageController::class,'edit_post']);
+Route::post('/update_post/{id}',[postpageController::class,'update_post']);
 
 
 
-Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-});
 
-require __DIR__.'/auth.php';

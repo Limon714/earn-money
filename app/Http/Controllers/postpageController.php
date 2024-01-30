@@ -34,6 +34,43 @@ class postpageController extends Controller
         $post->save();
         return redirect()->back()->with('message','Post added successfully');
     }
+    public function show_post(){
+        $post = Post::all();
+        return view('admin.show_post',compact('post'));
+    }
+
+    public function delete_post($id){
+      $post = Post::find($id);
+      $post->delete();
+
+    
+      return redirect()->back()->with('message',"Post deleted successful");
+    }
+    
+    public function edit_post($id){
+      $post = Post::find($id);
+      return view('admin.edit_post',compact('post'));
+
+    }
+
+    public function update_post(Request $request,$id)
+    {
+        $post = Post::find($id);
+        $post->title = $request->title;
+        $post->description = $request->description;
+
+        $image = $request->image;
+        if($image){
+        $imageName = time().'.'.$image->getClientOriginalExtension();
+        $request->image->move('postImage',$imageName);
+        $post->image = $imageName;
+        }
+
+        $post->save();
+        return redirect('/showpost')->with('message','Update successful');
+
+    }
+
 
 
 }
