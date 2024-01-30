@@ -67,14 +67,10 @@
           </div>
           <!-- Tasks end-->
          
-          <!-- Languages dropdown    -->
-          <div class="list-inline-item dropdown"><a id="languages" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link language dropdown-toggle"><img src="backend/img/avatar-2.jpg" width="24" height="24" alt="English"><span class="d-none d-sm-inline-block">English</span></a>
-            <div aria-labelledby="languages" class="dropdown-menu"><a rel="nofollow" href="#" class="dropdown-item"> <img src="backend/img/avatar-0.jpg" width="24" height="24" alt="English" class="mr-2"><span>German</span></a><a rel="nofollow" href="#" class="dropdown-item"> <img src="backend/img/avatar-1.jpg" width="24" height="24" alt="English" class="mr-2"><span>French  </span></a></div>
-          </div>
+       
           <!-- Log out               -->
           <div class="list-inline-item logout">              
-                 {{-- <a id="logout" href="{{ route('logout') }}" class="nav-link">
-                  Logout <i class="icon-logout"></i></a> --}}
+    
 
                   <x-app-layout>
 
