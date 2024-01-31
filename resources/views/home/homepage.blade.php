@@ -9,29 +9,33 @@
     @include('home.header')
       <!-- post section start -->
       <div class="services_section layout_padding">
+         @if (session()->has('message'))
+         <div class="mx-5 alert alert-danger" style="width:925px">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>
+
+            {{ session()->get('message') }}
+        </div>
+    
+@endif
          <div class="container">
             <h1 class="services_taital">Trending Post </h1>
             <p class="services_text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration</p>
             <div class="services_section_2">
                <div class="row">
-                  <div class="col-md-4">
-                     <div><img src="images/img-1.png" class="services_img">
+                  @foreach ($post as $p)
                      
-                        <h3 class="mt-2">This is a first blog post image.This is a first blog post image.This is a first blog post image.This is a first blog post image.</h3>
-                     <img src="assets/2.png" alt="profile" class="w-12 h-12 bg-blue-900 rounded-3xl">
-                        <p>Author</p>
-                     </div>
-                     <div class="btn_main"><a href="#">Read More</a></div>
-                  </div>
-                  
-                  {{-- <div class="col-md-4">
-                     <div><img src="images/img-2.png" class="services_img"></div>
-                     <div class="btn_main active"><a href="#">Hiking</a></div>
-                  </div>
+              
                   <div class="col-md-4">
-                     <div><img src="images/img-3.png" class="services_img"></div>
-                     <div class="btn_main"><a href="#">Camping</a></div>
-                  </div> --}}
+                     <div><img src="postImage/{{ $p->image }}" class="w-[400px] h-[300px] services_img mb-3 rounded">
+                     
+                        <h3 class="mt-2">{{ $p->description }}</h3>
+                     <img src="assets/2.png" alt="profile" class="w-12 h-12 bg-blue-900 rounded-3xl">
+                        <p>{{ $p->name }}</p>
+                     </div>
+                     <div class="btn_main"><a  href="{{ url('post_details',$p->id) }}" wire:navigate>Read More</a></div>
+                  </div>
+                  @endforeach
+                 
                </div>
             </div>
             
@@ -42,4 +46,4 @@
       
       @include('home.js')
       </body>
-</htm
+</html>
