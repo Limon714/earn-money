@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\Post;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Models\User;
+use RealRashid\SweetAlert\Facades\Alert;
+
 
 class postpageController extends Controller
 {
@@ -70,6 +73,23 @@ class postpageController extends Controller
         return redirect('/showpost')->with('message','Update successful');
 
     }
+
+    public function active_post($id){
+        $post = Post::find($id);
+        $post->post_status = 'Active';
+        $post->save();
+        Alert::success('Success','Post Activate Successully');
+        return redirect()->back();
+    }
+    public function inactive_post($id){
+        $post = Post::find($id);
+        $post->post_status = 'Inactive';
+        $post->save();
+        Alert::warning('Inactive','Post is inactive now.');
+        return redirect()->back();
+    }
+
+
 
 
 

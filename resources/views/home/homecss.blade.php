@@ -12,8 +12,12 @@
  <meta name="author" content="">
  <!-- bootstrap css -->
  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+ <!-- Tailwind css -->
+<script src="https://cdn.tailwindcss.com"></script>
  <!-- style css -->
  <link rel="stylesheet" type="text/css" href="css/style.css">
+ <!-- Boxicons -->
+ <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
  <!-- Responsive-->
  <link rel="stylesheet" href="css/responsive.css">
  <!-- fevicon -->
