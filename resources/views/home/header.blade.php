@@ -3,7 +3,7 @@
     <div class="header_main">
        <div class="mobile_menu">
           <nav class="navbar navbar-expand-lg navbar-light bg-light">
-             <div class="logo_mobile"><a href="index.html"><img src="images/logo.png"></a></div>
+             <div class="logo_mobile"><a href="{{ url('home') }}"><img src="images/logo1.png"></a></div>
              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
              <span class="navbar-toggler-icon"></span>
              </button>
@@ -29,14 +29,15 @@
           </nav>
        </div>
        <div class="container-fluid">
-          <div class="logo"><a href="index.html"><img src="images/logo1.png"></a></div>
+          <div class="logo"><a href="{{ url('home') }}" ><img src="images/logo1.png" style="margin-left:550px !important"></a></div>
           <div class="menu_main">
              <ul>
                 <li class="active"><a href="{{ url('home') }}">Home</a></li>
                
-                <li><a href="services.html">Services</a></li>
+                
                 @if (Route::has('login'))
                 @auth
+                <li><a href="{{ url('my_post') }}">My Post</a></li>
                 <li><a href="{{ url('new_post') }}">Create Post</a></li>
                     <x-app-layout>
                     </x-app-layout>

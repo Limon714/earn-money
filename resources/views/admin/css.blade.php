@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="all,follow">
   
+    <script src="https://cdn.tailwindcss.com"></script>
+
+        <!-- Boxicons -->
+     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
     <!-- Bootstrap CSS-->
     <link rel="stylesheet" href="backend/vendor/bootstrap/css/bootstrap.min.css">
     <!-- Font Awesome CSS-->

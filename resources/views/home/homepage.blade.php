@@ -2,8 +2,7 @@
 <html lang="en">
    <head>
     @include('home.homecss')
-    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
+
       </head>
    <body>
     @include('home.header')
@@ -16,19 +15,19 @@
             {{ session()->get('message') }}
         </div>
     
-@endif
+         @endif
          <div class="container">
-            <h1 class="services_taital">Trending Post </h1>
-            <p class="services_text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration</p>
-            <div class="services_section_2">
-               <div class="row">
+            <h1 class="flex items-center justify-center services_taital">Trending Post </h1>
+            <p class="flex items-center justify-center services_text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration</p>
+            <div class="services_section_2 h-100">
+               <div class="flex items-center justify-center p-2 shadow flex-between row">
                   @foreach ($post as $p)
                      
               
-                  <div class="col-md-4">
+                  <div class="p-4 m-2 shadow col-md-4">
                      <div><img src="postImage/{{ $p->image }}" class="w-[400px] h-[300px] services_img mb-3 rounded">
-                     
-                        <h3 class="mt-2">{{ $p->description }}</h3>
+                        <h1 class="mt-1 text-xl">{{ $p->title }}</h1>
+                        <h3 class="mt-1">{{ $p->description }}</h3>
                      <img src="assets/2.png" alt="profile" class="w-12 h-12 bg-blue-900 rounded-3xl">
                         <p>{{ $p->name }}</p>
                      </div>
