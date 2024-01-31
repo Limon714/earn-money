@@ -32,19 +32,19 @@
           <div class="logo"><a href="index.html"><img src="images/logo1.png"></a></div>
           <div class="menu_main">
              <ul>
-                <li class="active"><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
+                <li class="active"><a href="{{ url('home') }}">Home</a></li>
+               
                 <li><a href="services.html">Services</a></li>
                 @if (Route::has('login'))
                 @auth
-                
+                <li><a href="{{ url('new_post') }}">Create Post</a></li>
                     <x-app-layout>
                     </x-app-layout>
-                
+                    
                
                 @else
-                <li><a href="{{ route('login') }}">Login</a></li>
-                <li><a href="{{ route('register') }}">Register</a></li>
+                <li><a wire:navigate href="{{ route('login') }}">Login</a></li>
+                <li><a wire:navigate href="{{ route('register') }}">Register</a></li>
                 @endauth
                 @endif
              </ul>

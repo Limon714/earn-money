@@ -20,6 +20,9 @@ Route::get('/home',[HomeController::class,'home'])
 
 
 Route::get('/',[HomeController::class,'homepage']);
+Route::get('/post_details/{id}',[HomeController::class,'postdetails']);
+Route::get('/new_post',[HomeController::class,'newpost'])->middleware('auth');
+Route::post('/user_add_post',[HomeController::class,'user_add_post'])->middleware('auth');
 Route::get('/postpage',[postpageController::class,'postpage']);
 Route::post('/add_post',[postpageController::class,'add_post']);
 Route::get('/showpost',[postpageController::class,'show_post']);
