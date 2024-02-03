@@ -113,4 +113,7 @@ class HomeController extends Controller
         Alert::success('Success','Post Update Permanently');
         return redirect('/my_post')->with('message','Update successful');
     }
+
+
+   
 }

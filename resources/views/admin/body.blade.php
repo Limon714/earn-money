@@ -2,12 +2,12 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-3 col-sm-6">
-          <div class="statistic-block block">
+          <div class="block statistic-block">
             <div class="progress-details d-flex align-items-end justify-content-between">
               <div class="title">
-                <div class="icon"><i class="icon-user-1"></i></div><strong>New Clients</strong>
+                <div class="icon"><i class="icon-user-1"></i></div><strong>Total Post</strong>
               </div>
-              <div class="number dashtext-1">27</div>
+              <div class="number dashtext-1">7</div>
             </div>
             <div class="progress progress-template">
               <div role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" class="progress-bar progress-bar-template dashbg-1"></div>
@@ -15,7 +15,7 @@
           </div>
         </div>
         <div class="col-md-3 col-sm-6">
-          <div class="statistic-block block">
+          <div class="block statistic-block">
             <div class="progress-details d-flex align-items-end justify-content-between">
               <div class="title">
                 <div class="icon"><i class="icon-contract"></i></div><strong>New Projects</strong>
@@ -28,7 +28,7 @@
           </div>
         </div>
         <div class="col-md-3 col-sm-6">
-          <div class="statistic-block block">
+          <div class="block statistic-block">
             <div class="progress-details d-flex align-items-end justify-content-between">
               <div class="title">
                 <div class="icon"><i class="icon-paper-and-pencil"></i></div><strong>New Invoices</strong>
@@ -41,7 +41,7 @@
           </div>
         </div>
         <div class="col-md-3 col-sm-6">
-          <div class="statistic-block block">
+          <div class="block statistic-block">
             <div class="progress-details d-flex align-items-end justify-content-between">
               <div class="title">
                 <div class="icon"><i class="icon-writing-whiteboard"></i></div><strong>All Projects</strong>
@@ -61,7 +61,7 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-lg-4">
-          <div class="stats-with-chart-2 block">
+          <div class="block stats-with-chart-2">
             <div class="title"><strong class="d-block">Credit Sales</strong><span class="d-block">Lorem ipsum dolor sit</span></div>
             <div class="piechart chart">
               <canvas id="pieChartHome1"></canvas>
@@ -70,7 +70,7 @@
           </div>
         </div>
         <div class="col-lg-4">
-          <div class="stats-with-chart-2 block">
+          <div class="block stats-with-chart-2">
             <div class="title"><strong class="d-block">Channel Sales</strong><span class="d-block">Lorem ipsum dolor sit</span></div>
             <div class="piechart chart">
               <canvas id="pieChartHome2"></canvas>
@@ -79,7 +79,7 @@
           </div>
         </div>
         <div class="col-lg-4">
-          <div class="stats-with-chart-2 block">
+          <div class="block stats-with-chart-2">
             <div class="title"><strong class="d-block">Direct Sales</strong><span class="d-block">Lorem ipsum dolor sit</span></div>
             <div class="piechart chart">
               <canvas id="pieChartHome3"></canvas>
