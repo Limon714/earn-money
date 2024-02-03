@@ -1,3 +1,19 @@
+# Install Laravel
+``` composer create-project laravel/laravel app-name ```
+
+# Install Breeze 
+``` composer require laravel/breeze ```
+
+``` php artisan breeze:install ```
+# Install Node
+```npm install```
+
+```npm run build```
+
+### Change On App-> Providers
+![Screenshot_10](https://github.com/Limon714/ras-blog/assets/72975868/3da8a96e-e424-4cb6-8396-eaf743093bf4)
+
+
 ## Front End
 ### Register a new account
 ![screencapture-127-0-0-1-8000-home-2024-01-31-20_19_08](https://github.com/Limon714/mini-blog/assets/72975868/a9808486-6ecb-4b30-bc46-dc18d2369555)
